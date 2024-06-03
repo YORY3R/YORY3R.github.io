@@ -1,0 +1,98 @@
+@font-face {
+  font-family: "Arcade Classic";
+  src: url("/assets/ARCADECLASSIC.ttf") format("truetype");
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: black;
+  font-family: "Arcade Classic", sans-serif;
+  font-size: 10vw;
+
+  animation-name: color;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0ms;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+h1 {
+  opacity: 0;
+
+  animation-name: shake, opacity;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite, 1;
+  animation-fill-mode: forwards;
+}
+
+h1:nth-child(1) {
+  animation-delay: 0ms;
+}
+h1:nth-child(2) {
+  animation-delay: 100ms;
+}
+h1:nth-child(3) {
+  animation-delay: 200ms;
+}
+h1:nth-child(4) {
+  animation-delay: 300ms;
+}
+h1:nth-child(5) {
+  animation-delay: 400ms;
+}
+h1:nth-child(6) {
+  animation-delay: 500ms;
+}
+
+@keyframes color {
+  0% {
+    color: red;
+  }
+  25% {
+    color: green;
+  }
+  50% {
+    color: blue;
+  }
+  75% {
+    color: green;
+  }
+  100% {
+    color: red;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
